@@ -1,5 +1,5 @@
 # Flask-FaceRecognition
-##Warning 
+## Warning 
 The project can only be run in linux platforms.
 
 ## About
