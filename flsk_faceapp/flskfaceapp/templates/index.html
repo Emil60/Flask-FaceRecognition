@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>facerecog</title>
+</head>
+<body>
+    <form method="POST" action="" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+      <div>
+        <div>
+          <label>Name:</label>
+          {{ form.name(placeholder='Name') }}
+          <label>Photo:</label>
+          {{ form.photo() }}
+          {{ form.submit }}
+          {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class=flashes>
+                  {% for message in messages %}
+                    <li>{{ message }}</li>
+                  {% endfor %}
+                </ul>
+            {% endif %}
+          {% endwith %}
+        </div>
+      </div>
+</body>
+</html>
